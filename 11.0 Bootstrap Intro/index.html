@@ -33,6 +33,97 @@
     </div>
 
   </div>
+
+
+<!-- Container Principal: Usando container-fluid para ocupar 100% da largura disponível na viewport -->
+<div class="container-fluid">
+  <div class="row">  <!-- Linha Principal: contém todos os elementos principais do layout -->
+  
+    <!-- Sidebar Menu: Ocupa 3 colunas em telas médias (md) e 2 colunas em telas grandes (lg),
+         mantendo-se visível e consistente através das mudanças de tamanho de tela. -->
+    <div class="col-md-3 col-lg-2 d-md-block bg-light sidebar border-custom">
+      <!-- Título da Sidebar -->
+      <h4 class="px-3 py-2">Menu de Navegação</h4>
+      <!-- Navegação: Lista de links para navegação vertical -->
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Perfil</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Configurações</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Suporte</a></li>
+      </ul>
+    </div>
+    
+    <!-- Área de Conteúdo Principal: Ocupa o restante do espaço, 9 colunas em md e 10 colunas em lg -->
+    <div class="col-md-9 col-lg-10">
+      <!-- Grid de Cards: Cada linha adapta a quantidade de colunas conforme o tamanho da tela.
+           Usa row-cols-md-3 para ter três colunas por linha em telas md e maiores. -->
+      <div class="row row-cols-1 row-cols-md-3 g-4 px-3">
+      
+        <!-- Card 1: ocupa espaço igualmente dentro do grid de três colunas em telas md ou maiores.
+             Em telas menores, ocupa a largura total da linha. -->
+        <div class="col">
+          <div class="card border-custom">
+            <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card Title 1</h5>
+              <p class="card-text">Descrição do conteúdo do card.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Os demais cards seguem a mesma estrutura e lógica de responsividade do Card 1. -->
+        <!-- Card 2 -->
+        <div class="col">
+          <div class="card border-custom">
+            <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card Title 2</h5>
+              <p class="card-text">Descrição do conteúdo do card.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="col">
+          <div class="card border-custom">
+            <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card Title 3</h5>
+              <p class="card-text">Descrição do conteúdo do card.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 4 -->
+        <div class="col">
+          <div class="card border-custom">
+            <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card Title 4</h5>
+              <p class="card-text">Descrição do conteúdo do card.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 5 -->
+        <div class="col">
+          <div class="card border-custom">
+            <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card Title 5</h5>
+              <p class="card-text">Descrição do conteúdo do card.</p>
+            </div>
+          </div>
+        </div>
+        
+      </div> <!-- Fim do grid de cards -->
+    </div> <!-- Fim da área principal de conteúdo -->
+    
+  </div> <!-- Fim da linha principal -->
+</div> <!-- Fim do container principal -->
+
+  
+
 </body>
 
 </html>
