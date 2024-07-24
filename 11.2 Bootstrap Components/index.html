@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Components</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <style>
+    .feature-icon {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 0.75rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Início da barra de navegação -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <!-- navbar: classe do Bootstrap para estilizar a barra de navegação
+       navbar-expand-lg: expande a barra de navegação em telas grandes
+       bg-body-tertiary: define o fundo como terciário (de acordo com o esquema de cores do Bootstrap) -->
+  <div class="container-fluid">
+    <!-- Container fluido para garantir que a barra ocupe toda a largura da tela -->
+    <a class="navbar-brand" href="#">
+      <!-- navbar-brand: estiliza o nome da marca na barra de navegação -->
+      <img src="./box-seam.svg" alt="" height="30px">Move It
+    </a>
+    <!-- Botão para o menu colapsado em telas menores -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- navbar-toggler: estiliza o botão de toggle para o menu colapsável -->
+      <span class="navbar-toggler-icon"></span>
+      <!-- navbar-toggler-icon: ícone do botão de toggle -->
+    </button>
+    <!-- Menu colapsável que contém os links de navegação -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- collapse: classe do Bootstrap para fazer a seção colapsável
+           navbar-collapse: estiliza a seção colapsada da barra de navegação -->
+      <!-- Lista de links de navegação alinhados à esquerda -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- navbar-nav: estiliza a lista de navegação
+             me-auto: margem à direita automática para alinhar à esquerda
+             mb-2: margem inferior para espaçamento em telas menores
+             mb-lg-0: remove a margem inferior em telas grandes -->
+        <li class="nav-item">
+          <!-- nav-item: estiliza cada item da navegação -->
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <!-- nav-link: estiliza os links de navegação
+               active: indica o link ativo -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <!-- Item de menu com dropdown para mais opções -->
+        <li class="nav-item dropdown">
+          <!-- dropdown: classe para itens de menu que possuem dropdown -->
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <!-- dropdown-toggle: estiliza o link que ativa o dropdown -->
+            Services
+          </a>
+          <ul class="dropdown-menu">
+            <!-- dropdown-menu: estiliza o menu do dropdown -->
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <!-- dropdown-item: estiliza cada item do dropdown -->
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider">
+              <!-- dropdown-divider: estiliza o divisor no menu dropdown -->
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Formulário de pesquisa alinhado à direita -->
+      <form class="d-flex" role="search">
+        <!-- d-flex: utiliza flexbox para layout flexível
+             role="search": indica que este é um formulário de pesquisa -->
+        <input class="form-control me-2" type="search" placeholder="Postcode" aria-label="Search">
+        <!-- form-control: estiliza o campo de entrada
+             me-2: margem à direita para espaçamento
+             type="search": especifica que o campo é de pesquisa -->
+        <button class="btn btn-outline-success" type="submit">Check</button>
+        <!-- btn: estiliza o botão
+             btn-outline-success: botão com estilo de contorno de sucesso -->
+      </form>
+    </div>
+  </div>
+</nav>
+<!-- Fim da barra de navegação -->
+
+<!-- Início da seção principal com título e imagem -->
+<div class="px-4 pt-5 my-5 text-center border-bottom">
+  <!-- px-4: padding horizontal (esquerda e direita)
+       pt-5: padding top (superior)
+       my-5: margem vertical (superior e inferior)
+       text-center: alinha o texto ao centro
+       border-bottom: adiciona uma borda inferior -->
+  <h1 class="display-4 fw-bold text-body-emphasis">Move With Joy</h1>
+  <!-- display-4: estiliza o título com um tamanho grande
+       fw-bold: fonte em negrito
+       text-body-emphasis: enfatiza a cor do texto -->
+  <div class="col-lg-6 mx-auto">
+    <!-- col-lg-6: largura da coluna em 6/12 em telas grandes
+         mx-auto: margem horizontal automática para centralizar -->
+    <p class="lead mb-4">Welcome to our website, where we are on a mission to provide exceptional moving services to
+      customers in the US. As a startup, we believe that moving doesn't have to be stressful or complicated, and we
+      are passionate about making the process as seamless and enjoyable as possible.
+    </p>
+    <!-- lead: estiliza o parágrafo com destaque
+         mb-4: margem inferior -->
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+      <!-- d-grid: utiliza grid layout
+           gap-2: espaçamento entre os elementos
+           d-sm-flex: flexbox layout em telas pequenas
+           justify-content-sm-center: centraliza em telas pequenas
+           mb-5: margem inferior -->
+      <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Get a Quote</button>
+      <!-- btn: estiliza o botão
+           btn-primary: botão com estilo primário
+           btn-lg: botão grande
+           px-4: padding horizontal
+           me-sm-3: margem direita em telas pequenas -->
+      <button type="button" class="btn btn-outline-secondary btn-lg px-4">Contact Us</button>
+      <!-- btn: estiliza o botão
+           btn-outline-secondary: botão com estilo de contorno secundário
+           btn-lg: botão grande
+           px-4: padding horizontal -->
+    </div>
+  </div>
+  <div class="overflow-hidden" style="max-height: 46vh;">
+    <!-- overflow-hidden: oculta o conteúdo que transborda
+         max-height: define a altura máxima -->
+    <div class="container px-5">
+      <!-- container: centraliza e dá margem ao conteúdo
+           px-5: padding horizontal -->
+      <!-- Imagem de exemplo com borda e sombra -->
+      <img src="moving-van.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700"
+        height="500" loading="lazy">
+      <!-- img-fluid: imagem responsiva
+           border: borda ao redor da imagem
+           rounded-3: borda arredondada
+           shadow-lg: sombra grande
+           mb-4: margem inferior
+           width/height: dimensões da imagem
+           loading="lazy": carregamento preguiçoso da imagem -->
+    </div>
+  </div>
+</div>
+<!-- Fim da seção principal -->
+
+<!-- Início da seção de recursos com três colunas -->
+<div class="container px-4 py-5" id="featured-3">
+  <!-- container: centraliza e dá margem ao conteúdo
+       px-4: padding horizontal
+       py-5: padding vertical
+       id="featured-3": identificador da seção -->
+  <h2 class="pb-2 border-bottom">Why Move With Us?</h2>
+  <!-- pb-2: padding inferior
+       border-bottom: borda inferior -->
+  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    <!-- row: cria uma linha de grid
+         g-4: espaçamento entre colunas
+         py-5: padding vertical
+         row-cols-1: uma coluna por linha em telas pequenas
+         row-cols-lg-3: três colunas por linha em telas grandes -->
+    <div class="feature col">
+      <!-- feature: classe personalizada para estilizar cada recurso
+           col: define a coluna -->
+      <div
+        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+        <!-- feature-icon: classe personalizada para estilizar o ícone do recurso
+             d-inline-flex: flexbox em linha
+             align-items-center: alinha os itens ao centro verticalmente
+             justify-content-center: centraliza os itens horizontalmente
+             text-bg-primary: fundo primário com texto claro
+             bg-gradient: fundo com gradiente
+             fs-2: tamanho da fonte grande
+             mb-3: margem inferior -->
+        <img src="./briefcase.svg" alt="briefcase" height="30">
+        <!-- Ícone do recurso -->
+      </div>
+      <h3 class="fs-2">Professional</h3>
+      <!-- fs-2: tamanho da fonte grande -->
+      <p>Our team of professional movers are trained to prioritize efficiency, organization, and attention to detail.
+        We understand that your possessions are more than just objects - they are a reflection of your life, memories,
+        and experiences. That's why we take extra care to ensure that everything is packed and transported with the utmost
+        care and attention.</p>
+      <a href="#" class="icon-link">
+        <!-- icon-link: estiliza o link com um ícone -->
+        Get a quote
+        <img src="./chevron-right.svg" alt="chevron-right">
+      </a>
+    </div>
+    <div class="feature col">
+      <div
+        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+        <img src="./bus-front.svg" alt="bus-front" height="30">
+      </div>
+      <h3 class="fs-2">Countrywide</h3>
+      <p>We offer a range of services to suit your individual needs, whether you're moving locally or across the
+        country. Our team can handle everything from packing and loading to unloading and unpacking, so you can focus on settling
+        into your new home. And with our transparent pricing and no hidden fees, you can trust that you're getting a fair and
+        competitive rate for our services.</p>
+      <a href="#" class="icon-link">
+        Get a quote
+        <img src="./chevron-right.svg" alt="chevron-right">
+      </a>
+    </div>
+    <div class="feature col">
+      <div
+        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+        <img src="./chat-square-heart.svg" alt="chat-square-heart" height="30">
+      </div>
+      <h3 class="fs-2">Personal Touch</h3>
+      <p>At our core, we believe that moving should be an exciting and positive experience, not a stressful one. By
+        providing exceptional moving services in the US, we hope to revolutionize the way people think about moving and provide
+        a better, more personalized experience for our customers. Contact us today to learn more about how we can help you with
+        your next move.</p>
+      <a href="#" class="icon-link">
+        Get a quote
+        <img src="./chevron-right.svg" alt="chevron-right">
+      </a>
+    </div>
+  </div>
+</div>
+<!-- Fim da seção de recursos -->
+
+<!-- Início do carrossel de imagens -->
+<div class="container">
+  <!-- container: centraliza e dá margem ao conteúdo -->
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <!-- carousel: estiliza o carrossel de imagens
+         slide: animação de deslizar -->
+    <div class="carousel-indicators">
+      <!-- carousel-indicators: estiliza os indicadores do carrossel -->
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <!-- carousel-inner: container para os itens do carrossel -->
+      <div class="carousel-item active">
+        <!-- carousel-item: estiliza cada item do carrossel
+             active: define o item ativo -->
+        <img src="./couple.jpg" class="d-block w-100" alt="...">
+        <!-- d-block: display block
+             w-100: largura 100% -->
+      </div>
+      <div class="carousel-item">
+        <img src="./dog.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./family.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <!-- carousel-control-prev: botão de controle para item anterior -->
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <!-- carousel-control-prev-icon: ícone de controle anterior -->
+      <span class="visually-hidden">Previous</span>
+      <!-- visually-hidden: oculta visualmente mas acessível para leitores de tela -->
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <!-- carousel-control-next: botão de controle para próximo item -->
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <!-- carousel-control-next-icon: ícone de controle próximo -->
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<!-- Fim do carrossel de imagens -->
+
+<!-- Início do rodapé -->
+<div class="container">
+  <!-- container: centraliza e dá margem ao conteúdo -->
+  <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+    <!-- footer: seção de rodapé
+         row: cria uma linha de grid
+         row-cols-1: uma coluna por linha em telas pequenas
+         row-cols-sm-2: duas colunas por linha em telas médias
+         row-cols-md-5: cinco colunas por linha em telas grandes
+         py-5: padding vertical
+         my-5: margem vertical
+         border-top: borda superior -->
+    <div class="col mb-3">
+      <!-- col: define a coluna
+           mb-3: margem inferior -->
+      <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+        <!-- d-flex: flexbox layout
+             align-items-center: alinha os itens ao centro verticalmente
+             mb-3: margem inferior
+             link-body-emphasis: estiliza o link com ênfase no corpo
+             text-decoration-none: remove a decoração do texto -->
+        <svg class="bi me-2" width="40" height="32">
+          <!-- bi: ícone Bootstrap
+               me-2: margem à direita -->
+          <use xlink:href="#bootstrap"></use>
+          <!-- use: usa o ícone com referência -->
+        </svg>
+      </a>
+      <p class="text-body-secondary">© 2024</p>
+      <!-- text-body-secondary: cor secundária para o texto -->
+    </div>
+
+    <div class="col mb-3">
+      <!-- Espaço vazio para balancear a distribuição do conteúdo -->
+    </div>
+
+    <!-- Seções do rodapé com links de navegação -->
+    <div class="col mb-3">
+      <h5>Section</h5>
+      <ul class="nav flex-column">
+        <!-- nav: estiliza a lista de navegação
+             flex-column: flexbox em coluna -->
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+        <!-- nav-item: estiliza cada item da navegação
+             mb-2: margem inferior
+             nav-link: estiliza o link de navegação
+             p-0: padding zero
+             text-body-secondary: cor secundária para o texto -->
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+      </ul>
+    </div>
+
+    <div class="col mb-3">
+      <h5>Section</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+      </ul>
+    </div>
+
+    <div class="col mb-3">
+      <h5>Section</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+<!-- Fim do rodapé -->
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
